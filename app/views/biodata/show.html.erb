@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @biodatum.name %>
+</p>
+
+<p>
+  <b>Age:</b>
+  <%= @biodatum.age %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @biodatum.location %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @biodatum.city %>
+</p>
+
+
+<%= link_to 'Edit', edit_biodatum_path(@biodatum) %> |
+<%= link_to 'Back', biodata_path %>

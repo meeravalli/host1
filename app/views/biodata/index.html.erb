@@ -1,0 +1,29 @@
+<h1>Listing biodata</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Location</th>
+    <th>City</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @biodata.each do |biodatum| %>
+  <tr>
+    <td><%= biodatum.name %></td>
+    <td><%= biodatum.age %></td>
+    <td><%= biodatum.location %></td>
+    <td><%= biodatum.city %></td>
+    <td><%= link_to 'Show', biodatum %></td>
+    <td><%= link_to 'Edit', edit_biodatum_path(biodatum) %></td>
+    <td><%= link_to 'Destroy', biodatum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Biodatum', new_biodatum_path %>
